@@ -1,0 +1,19 @@
+{
+    "background": {
+        "scripts": [
+            "bg.js"
+        ]
+    },
+    "description": "Use anime screenshots to search where this scene is taken from.",
+    "icons": {
+        "128": "icon128.png",
+        "16": "icon16.png",
+        "48": "icon48.png"
+    },
+    "manifest_version": 2,
+    "name": "Search Anime by Screenshot",
+    "permissions": [
+        "contextMenus"
+    ],
+    "version": "1.0"
+}
