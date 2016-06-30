@@ -16,9 +16,9 @@
         "page": "options.html"
     },
     "permissions": [
-        "activeTab",
         "contextMenus",
-        "storage"
+        "storage",
+        "https://whatanime.ga/*"
     ],
-    "version": "2.2.0"
+    "version": "2.2.1"
 }
