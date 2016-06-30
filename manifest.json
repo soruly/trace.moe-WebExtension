@@ -13,6 +13,7 @@
     "manifest_version": 2,
     "name": "Search Anime by Screenshot",
     "permissions": [
+        "activeTab",
         "contextMenus"
     ],
     "version": "2.1"
