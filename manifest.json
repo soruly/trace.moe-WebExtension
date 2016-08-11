@@ -1,8 +1,10 @@
 {
+    "author": "soruly",
     "background": {
         "scripts": [
             "bg.js"
-        ]
+        ],
+		"persistent": false
     },
     "description": "Use anime screenshots to search where this scene is taken from.",
     "icons": {
