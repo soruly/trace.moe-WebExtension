@@ -6,7 +6,7 @@ browser.runtime.sendMessage({
   type: "getImageDataURL"
 }, (response) => {
   if (response) {
-    //document.querySelector("#autoSearch").checked = true;
+    document.querySelector("#autoSearch").checked = true;
     document.querySelector("#originalImage").src = response.imageDataURL;
   }
 });
