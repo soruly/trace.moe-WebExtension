@@ -4,6 +4,7 @@ Anime Reverse Search WebExtension for Chrome, Firefox and Opera
 
 [![Chrome Web Store Downloads](https://img.shields.io/chrome-web-store/d/gkamnldpllcbiidlfacaccdoadedncfp.svg?maxAge=86400)](https://chrome.google.com/webstore/detail/search-anime-by-screensho/gkamnldpllcbiidlfacaccdoadedncfp)
 [![Join the chat at https://gitter.im/soruly/whatanime.ga-WebExtension](https://badges.gitter.im/soruly/whatanime.ga-WebExtension.svg)](https://gitter.im/soruly/whatanime.ga-WebExtension)
+[![Donate](https://img.shields.io/badge/donate-patreon-orange.svg)](https://www.patreon.com/soruly)
 
 [![Chrome Web Store](https://img.shields.io/badge/Chrome-Extension-green.svg?maxAge=86400)](https://chrome.google.com/webstore/detail/search-anime-by-screensho/gkamnldpllcbiidlfacaccdoadedncfp)
 [![Firefox Addon](https://img.shields.io/badge/Firefox-Add--on-orange.svg?maxAge=86400)](https://addons.mozilla.org/en-US/firefox/addon/search-anime-by-screenshot/)
