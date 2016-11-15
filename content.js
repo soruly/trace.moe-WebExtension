@@ -47,10 +47,31 @@ var handleMessage = (request, sender, sendResponse) => {
     });
   } else if (request.action === "getDataURL") {
     //assume only one element match the blob URL
-    let source = document.querySelector(`*[src='${request.target}']`);
-    sendResponse({
-      dataURL: toDataURL(source)
-    });
+    var source = null;
+    var elem = document.querySelectorAll("img, video");
+    
+    for (var i = 0; i < elem.length; ++i) {
+      if (absolutePath(elem[i].src) === request.target) {
+        source = elem[i];
+        break;
+      }
+      var sources = elem[i].querySelectorAll("source");
+      for (var j = 0; j < sources.length; ++j) {
+        if (absolutePath(sources[j].src) === request.target) {
+          source = elem[i];
+        }
+        break;
+      }
+    }
+    
+    if(source){
+      sendResponse({
+        dataURL: toDataURL(source)
+      });
+    }
+    else{
+      alert("Failed to get search image");
+    }
   }
 
 }
