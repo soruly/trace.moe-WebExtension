@@ -116,7 +116,7 @@ var fetchVideo = function(src, currentTime) {
 }
 
 browser.contextMenus.onClicked.addListener(function(info, tab) {
-  console.log(info);
+  
   if (info.srcUrl) {
     if (info.srcUrl.indexOf('blob:') === 0) {
       // must capture on context script
