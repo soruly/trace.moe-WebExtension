@@ -1,8 +1,7 @@
 {
     "author": "soruly",
     "background": {
-        "page": "background.html",
-        "persistent": true
+        "page": "background.html"
     },
     "content_scripts": [
         {
@@ -37,9 +36,5 @@
         "http://*/*",
         "https://*/*"
     ],
-    "version": "4.0.0",
-    "-ms-preload": {
-        "backgroundScript": "backgroundScriptsAPIBridge.js",
-        "contentScript": "contentScriptsAPIBridge.js"
-    }
+    "version": "4.0.1"
 }
