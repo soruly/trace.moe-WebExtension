@@ -13,7 +13,7 @@ var toDataURL = function(source) {
       canvas.width = source.width / source.height * canvas.height;
     }
     canvas.getContext('2d').drawImage(source, 0, 0, canvas.width, canvas.height);
-    return canvas.toDataURL("image/jpeg", 0.8);
+    return canvas.toDataURL("image/jpeg", 0.9);
   } catch (err) {
     return null;
   }
