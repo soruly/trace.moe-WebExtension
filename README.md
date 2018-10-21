@@ -25,13 +25,13 @@ Demo image
 
 Just right click on any Anime Screenshot to search
 
-![](https://addons.cdn.mozilla.net/user-media/previews/full/175/175673.png)
+![](https://addons.cdn.mozilla.net/user-media/previews/full/209/209946.png)
 
 Search result tells you which moment it appears.
 
 More info about the anime shown below provided by [ANILIST](https://anilist.co)
 
-![](https://addons.cdn.mozilla.net/user-media/previews/full/175/175674.png)
+![](https://addons.cdn.mozilla.net/user-media/previews/full/209/209947.png)
 
 ## Features
 - Fetch, resize, compress the search image locally within browser, avoid re-download if possible
