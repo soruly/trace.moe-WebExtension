@@ -25,7 +25,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 var search = function(dataURL) {
   imageDataURL = dataURL;
   browser.tabs.create({
-    url: 'https://whatanime.ga'
+    url: 'https://trace.moe'
   })
 }
 
