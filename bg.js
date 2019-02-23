@@ -17,6 +17,7 @@ var handleMessage = function(request, sender, sendResponse) {
     });
     imageDataURL = null;
   }
+  return true;
 }
 
 browser.runtime.onMessage.addListener(handleMessage);

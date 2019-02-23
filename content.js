@@ -73,7 +73,7 @@ var handleMessage = (request, sender, sendResponse) => {
       alert("Failed to get search image");
     }
   }
-
+  return true;
 }
 
 browser.runtime.onMessage.addListener(handleMessage);
