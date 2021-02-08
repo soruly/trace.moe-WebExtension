@@ -2,16 +2,15 @@
 
 Anime Reverse Search WebExtension for Chrome, Firefox and Opera
 
-[![Chrome Web Store Downloads](https://img.shields.io/chrome-web-store/d/gkamnldpllcbiidlfacaccdoadedncfp.svg)](https://chrome.google.com/webstore/detail/search-anime-by-screensho/gkamnldpllcbiidlfacaccdoadedncfp)
-[![Discord](https://img.shields.io/discord/437578425767559188.svg)](https://discord.gg/K9jn6Kj)
-[![license](https://img.shields.io/github/license/soruly/trace.moe-WebExtension.svg)](https://raw.githubusercontent.com/soruly/trace.moe-WebExtension/master/LICENSE)
-[![Donate](https://img.shields.io/badge/donate-patreon-orange.svg)](https://www.patreon.com/soruly)
+[![license](https://img.shields.io/github/license/soruly/trace.moe-WebExtension.svg?style=flat-square)](https://raw.githubusercontent.com/soruly/trace.moe-WebExtension/master/LICENSE)
+[![Chrome Web Store Downloads](https://img.shields.io/chrome-web-store/d/gkamnldpllcbiidlfacaccdoadedncfp.svg?style=flat-square)](https://chrome.google.com/webstore/detail/search-anime-by-screensho/gkamnldpllcbiidlfacaccdoadedncfp)
+[![Discord](https://img.shields.io/discord/437578425767559188.svg?style=flat-square)](https://discord.gg/K9jn6Kj)
 
-[![Chrome Web Store](https://img.shields.io/badge/Chrome-Extension-green.svg)](https://chrome.google.com/webstore/detail/search-anime-by-screensho/gkamnldpllcbiidlfacaccdoadedncfp)
-[![Firefox Addon](https://img.shields.io/badge/Firefox-Add--on-orange.svg)](https://addons.mozilla.org/en-US/firefox/addon/search-anime-by-screenshot/)
-[![Opera Addon](https://img.shields.io/badge/Opera-Add--on-red.svg)](https://addons.opera.com/en/extensions/details/search-anime-by-screenshot/)
-![Edge Extension](https://img.shields.io/badge/Edge-Extension-blue.svg)
-[![Safari Extension](https://img.shields.io/badge/Safari-Extension-blue.svg)](https://github.com/BlueCocoa/WAIT-Safari)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome-Extension-green.svg?style=flat-square)](https://chrome.google.com/webstore/detail/search-anime-by-screensho/gkamnldpllcbiidlfacaccdoadedncfp)
+[![Firefox Addon](https://img.shields.io/badge/Firefox-Add--on-orange.svg?style=flat-square)](https://addons.mozilla.org/en-US/firefox/addon/search-anime-by-screenshot/)
+[![Opera Addon](https://img.shields.io/badge/Opera-Add--on-red.svg?style=flat-square)](https://addons.opera.com/en/extensions/details/search-anime-by-screenshot/)
+![Edge Extension](https://img.shields.io/badge/Edge-Extension-blue.svg?style=flat-square)
+
 
 Use anime screenshots to search where this scene is taken from.
 
