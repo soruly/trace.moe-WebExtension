@@ -9,7 +9,7 @@ Anime Reverse Search WebExtension for Chrome, Firefox and Opera
 [![Chrome Web Store](https://img.shields.io/badge/Chrome-Extension-green.svg?style=flat-square)](https://chrome.google.com/webstore/detail/search-anime-by-screensho/gkamnldpllcbiidlfacaccdoadedncfp)
 [![Firefox Addon](https://img.shields.io/badge/Firefox-Add--on-orange.svg?style=flat-square)](https://addons.mozilla.org/en-US/firefox/addon/search-anime-by-screenshot/)
 [![Opera Addon](https://img.shields.io/badge/Opera-Add--on-red.svg?style=flat-square)](https://addons.opera.com/en/extensions/details/search-anime-by-screenshot/)
-![Edge Extension](https://img.shields.io/badge/Edge-Extension-blue.svg?style=flat-square)
+[![Edge Extension](https://img.shields.io/badge/Edge-Extension-blue.svg?style=flat-square)](https://microsoftedge.microsoft.com/addons/detail/search-anime-by-screensho/bkigcpancdclbiekidfbcghedaielbda)
 
 
 Use anime screenshots to search where this scene is taken from.
