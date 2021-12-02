@@ -1,40 +1,26 @@
 {
-    "author": "soruly",
-    "background": {
-        "page": "background.html"
+  "author": "soruly",
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["http://*/*", "https://*/*"]
     },
-    "content_scripts": [
-        {
-            "js": [
-                "content.js"
-            ],
-            "matches": [
-                "http://*/*",
-                "https://*/*"
-            ]
-        },{
-           "js": [
-                "trace.moe.js"
-            ],
-            "matches": [
-                "https://trace.moe/"
-            ] 
-        }
-    ],
-    "description": "Use anime screenshots to search where this scene is taken from.",
-    "icons": {
-        "128": "icon128.png",
-        "16": "icon16.png",
-        "48": "icon48.png"
-    },
-    "manifest_version": 2,
-    "name": "Search Anime by Screenshot",
-    "permissions": [
-        "contextMenus",
-        "activeTab",
-        "tabs",
-        "http://*/*",
-        "https://*/*"
-    ],
-    "version": "4.0.1"
+    {
+      "js": ["trace.moe.js"],
+      "matches": ["https://trace.moe/"]
+    }
+  ],
+  "description": "Use anime screenshots to search the scene it is taken from.",
+  "icons": {
+    "128": "icon128.png",
+    "16": "icon16.png",
+    "48": "icon48.png"
+  },
+  "manifest_version": 2,
+  "name": "Search Anime by Screenshot",
+  "permissions": ["contextMenus", "activeTab", "tabs", "http://*/*", "https://*/*"],
+  "version": "4.0.2"
 }
