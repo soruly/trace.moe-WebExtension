@@ -2,77 +2,52 @@ if (!self.browser && self.chrome) {
   browser = chrome;
 }
 
-var toDataURL = function (source) {
+const toDataURL = (element) => {
   try {
-    var canvas = document.createElement("canvas");
+    const canvas = document.createElement("canvas");
     canvas.crossOrigin = "anonymous";
     canvas.height = 720;
-    if (source.nodeName === "VIDEO") {
-      canvas.width = (source.videoWidth / source.videoHeight) * canvas.height;
+    if (element instanceof HTMLVideoElement) {
+      canvas.width = (element.videoWidth / element.videoHeight) * canvas.height;
     } else {
-      canvas.width = (source.width / source.height) * canvas.height;
+      canvas.width = (element.width / element.height) * canvas.height;
     }
-    canvas.getContext("2d").drawImage(source, 0, 0, canvas.width, canvas.height);
+    canvas.getContext("2d").drawImage(element, 0, 0, canvas.width, canvas.height);
     return canvas.toDataURL("image/jpeg", 0.9);
   } catch (err) {
     return null;
   }
 };
 
-var absolutePath = function (href) {
-  var link = document.createElement("a");
-  link.href = href;
-  return link.protocol + "//" + link.host + link.pathname + link.search + link.hash;
-};
+browser.runtime.sendMessage({ type: "getTargetSrc" });
 
-var handleMessage = (request, sender, sendResponse) => {
-  if (request.action === "getCurrentTime") {
-    var currentTime = 0;
-    var videos = document.querySelectorAll("video");
-    for (var i = 0; i < videos.length; ++i) {
-      if (absolutePath(videos[i].src).indexOf(request.target)) {
-        currentTime = videos[i].currentTime;
-        break;
-      }
-      var sources = videos[i].querySelectorAll("source");
-      for (var j = 0; j < sources.length; ++j) {
-        if (absolutePath(sources[j].src).indexOf(request.target)) {
-          currentTime = videos[i].currentTime;
+browser.runtime.onMessage.addListener(({ action, srcUrl, currentTime }, sender, sendResponse) => {
+  if (action === "getSearchImage" && srcUrl) {
+    //assume only one element match the src
+    const element = Array.from(document.querySelectorAll("img, video")).find(
+      (e) => e.currentSrc === srcUrl
+    );
+    if (!element) return alert("Fail to get search image");
+    if (currentTime && element instanceof HTMLVideoElement) {
+      element.pause();
+      element.volume = 0;
+      element.currentTime = currentTime;
+      element.oncanplay = () => {
+        const searchImage = toDataURL(element);
+        if (searchImage) {
+          sendResponse({ searchImage });
         }
-        break;
-      }
-    }
-    sendResponse({
-      currentTime: currentTime,
-    });
-  } else if (request.action === "getDataURL") {
-    //assume only one element match the blob URL
-    var source = null;
-    var elem = document.querySelectorAll("img, video");
-
-    for (var i = 0; i < elem.length; ++i) {
-      if (absolutePath(elem[i].src) === request.target) {
-        source = elem[i];
-        break;
-      }
-      var sources = elem[i].querySelectorAll("source");
-      for (var j = 0; j < sources.length; ++j) {
-        if (absolutePath(sources[j].src) === request.target) {
-          source = elem[i];
-        }
-        break;
-      }
-    }
-
-    if (source) {
-      sendResponse({
-        dataURL: toDataURL(source),
-      });
+      };
     } else {
-      alert("Failed to get search image");
+      const searchImage = toDataURL(element);
+      if (searchImage) {
+        sendResponse({ searchImage });
+      } else {
+        sendResponse({
+          currentTime: element instanceof HTMLVideoElement ? element.currentTime : null,
+        });
+      }
     }
   }
   return true;
-};
-
-browser.runtime.onMessage.addListener(handleMessage);
+});
