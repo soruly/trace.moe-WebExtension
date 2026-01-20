@@ -53,11 +53,10 @@ const search = async (dataURL) => {
   });
 };
 
-browser.contextMenus.onClicked.addListener(async ({ srcUrl }) => {
+browser.contextMenus.onClicked.addListener(async ({ srcUrl }, tab) => {
   if (!srcUrl) return;
-  const activeTabs = await browser.tabs.query({ active: true });
   browser.tabs.sendMessage(
-    activeTabs[0].id,
+    tab.id,
     {
       action: "getSearchImage",
       srcUrl,
