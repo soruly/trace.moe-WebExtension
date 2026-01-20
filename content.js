@@ -2,11 +2,19 @@ if (!self.browser && self.chrome) {
   browser = chrome;
 }
 
+let cachedCanvas = null;
+
 const toDataURL = (element) => {
   try {
-    const canvas = document.createElement("canvas");
-    canvas.crossOrigin = "anonymous";
-    canvas.height = 720;
+    if (!cachedCanvas) {
+      cachedCanvas = document.createElement("canvas");
+      cachedCanvas.crossOrigin = "anonymous";
+      cachedCanvas.height = 720;
+    }
+    const canvas = cachedCanvas;
+    if (canvas.height !== 720) {
+      canvas.height = 720;
+    }
     if (element instanceof HTMLVideoElement) {
       canvas.width = (element.videoWidth / element.videoHeight) * canvas.height;
     } else {
