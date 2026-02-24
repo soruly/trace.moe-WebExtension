@@ -32,9 +32,23 @@ browser.runtime.sendMessage({ type: "getTargetSrc" });
 browser.runtime.onMessage.addListener(({ action, srcUrl, currentTime }, sender, sendResponse) => {
   if (action === "getSearchImage" && srcUrl) {
     //assume only one element match the src
-    const element = Array.from(document.querySelectorAll("img, video")).find(
-      (e) => e.currentSrc === srcUrl
-    );
+    let element;
+    const imgs = document.getElementsByTagName("img");
+    for (let i = 0; i < imgs.length; i++) {
+      if (imgs[i].currentSrc === srcUrl) {
+        element = imgs[i];
+        break;
+      }
+    }
+    if (!element) {
+      const videos = document.getElementsByTagName("video");
+      for (let i = 0; i < videos.length; i++) {
+        if (videos[i].currentSrc === srcUrl) {
+          element = videos[i];
+          break;
+        }
+      }
+    }
     if (!element) return alert("Fail to get search image");
     if (currentTime && element instanceof HTMLVideoElement) {
       element.pause();
