@@ -46,6 +46,7 @@ browser.runtime.onMessage.addListener(({ action, srcUrl, currentTime }, sender, 
           sendResponse({ searchImage });
         }
       };
+      return true;
     } else {
       const searchImage = toDataURL(element);
       if (searchImage) {
@@ -57,5 +58,4 @@ browser.runtime.onMessage.addListener(({ action, srcUrl, currentTime }, sender, 
       }
     }
   }
-  return true;
 });
