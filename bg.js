@@ -43,7 +43,6 @@ browser.runtime.onMessage.addListener((request, { tab }, sendResponse) => {
     targetSrc = null;
     targetCurrentTime = null;
   }
-  return true;
 });
 
 const search = async (dataURL) => {
