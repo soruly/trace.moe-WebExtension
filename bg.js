@@ -38,7 +38,7 @@ browser.runtime.onMessage.addListener((request, { tab }, sendResponse) => {
         if (response.searchImage) {
           search(response.searchImage);
         }
-      }
+      },
     );
     targetSrc = null;
     targetCurrentTime = null;
@@ -72,6 +72,6 @@ browser.contextMenus.onClicked.addListener(async ({ srcUrl }, tab) => {
         active: response.currentTime !== null,
         url: srcUrl,
       });
-    }
+    },
   );
 });
