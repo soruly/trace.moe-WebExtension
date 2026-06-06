@@ -2,14 +2,14 @@ if (!self.browser && self.chrome) {
   browser = chrome;
 }
 
-(async () => {
-  await browser.contextMenus.removeAll();
-  await browser.contextMenus.create({
+// add context menu on image and video
+browser.runtime.onInstalled.addListener(() => {
+  browser.contextMenus.create({
     id: "search-on-trace.moe",
-    title: "Search on trace.moe",
+    title: browser.i18n.getMessage("contextMenuName"),
     contexts: ["image", "video"],
   });
-})();
+});
 
 let imageDataURL = null;
 let targetSrc = null;

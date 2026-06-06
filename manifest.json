@@ -22,5 +22,6 @@
   "manifest_version": 3,
   "name": "Search Anime by Screenshot",
   "permissions": ["contextMenus", "activeTab"],
-  "version": "5.0.0"
+  "default_locale": "en",
+  "version": "5.1.0"
 }
